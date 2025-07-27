@@ -11,16 +11,35 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <Features />
-      <Assistant />
-      <ResumeBuilder />
-      <AdminPanel />
+
+      <section id="hero" className="section-wrapper">
+        <Hero />
+      </section>
+
+      <section id="about" className="section-wrapper">
+        <About />
+      </section>
+
+      <section id="features" className="section-wrapper">
+        <Features />
+      </section>
+
+      <section id="assistant" className="section-wrapper">
+        <Assistant />
+      </section>
+
+      <section id="resume" className="section-wrapper">
+        <ResumeBuilder />
+      </section>
+
+      <section id="admin" className="section-wrapper">
+        <AdminPanel />
+      </section>
     </>
   );
 }
 
 export default App;
+
 
 

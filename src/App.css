@@ -7,10 +7,9 @@
 
 html, body {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  height: 100%;
-  overflow-y: scroll;
   font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  background-color: #000;
 }
 
 /* Navbar fixed at top */
@@ -27,15 +26,16 @@ html, body {
   z-index: 1000;
 }
 
-/* Section styling */
+/* Section wrapper */
 .section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px; /* so content doesn't hide behind navbar */
+  padding-top: 100px;
+  padding-bottom: 60px;
   padding-left: 2rem;
   padding-right: 2rem;
   text-align: center;
@@ -72,7 +72,7 @@ html, body {
   color: white;
 }
 
-/* Headings and text */
+/* Typography */
 .section h1, .section h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
