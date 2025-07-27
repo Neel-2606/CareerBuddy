@@ -6,33 +6,34 @@ import Features from './components/Features';
 import Assistant from './components/Assistant';
 import ResumeBuilder from './components/ResumeBuilder';
 import AdminPanel from './components/AdminPanel';
+import './App.css';
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <section className="py-24 px-4 sm:px-8">
+      <section id="hero" className="section">
         <Hero />
       </section>
 
-      <section className="py-24 px-4 sm:px-8 bg-gray-50">
+      <section id="about" className="section">
         <About />
       </section>
 
-      <section className="py-24 px-4 sm:px-8">
+      <section id="features" className="section">
         <Features />
       </section>
 
-      <section className="py-24 px-4 sm:px-8 bg-gray-50">
+      <section id="assistant" className="section">
         <Assistant />
       </section>
 
-      <section className="py-24 px-4 sm:px-8">
+      <section id="resume" className="section">
         <ResumeBuilder />
       </section>
 
-      <section className="py-24 px-4 sm:px-8 bg-gray-50">
+      <section id="admin" className="section">
         <AdminPanel />
       </section>
     </>
@@ -40,7 +41,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
