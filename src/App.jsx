@@ -11,30 +11,12 @@ function App() {
   return (
     <>
       <Navbar />
-
-      <section id="hero" className="section-wrapper">
-        <Hero />
-      </section>
-
-      <section id="about" className="section-wrapper">
-        <About />
-      </section>
-
-      <section id="features" className="section-wrapper">
-        <Features />
-      </section>
-
-      <section id="assistant" className="section-wrapper">
-        <Assistant />
-      </section>
-
-      <section id="resume" className="section-wrapper">
-        <ResumeBuilder />
-      </section>
-
-      <section id="admin" className="section-wrapper">
-        <AdminPanel />
-      </section>
+      <div className="py-20"><Hero /></div>
+      <div className="py-20 bg-gray-50"><About /></div>
+      <div className="py-20"><Features /></div>
+      <div className="py-20 bg-gray-50"><Assistant /></div>
+      <div className="py-20"><ResumeBuilder /></div>
+      <div className="py-20 bg-gray-50"><AdminPanel /></div>
     </>
   );
 }
