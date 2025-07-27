@@ -11,17 +11,36 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="py-20"><Hero /></div>
-      <div className="py-20 bg-gray-50"><About /></div>
-      <div className="py-20"><Features /></div>
-      <div className="py-20 bg-gray-50"><Assistant /></div>
-      <div className="py-20"><ResumeBuilder /></div>
-      <div className="py-20 bg-gray-50"><AdminPanel /></div>
+
+      <section className="py-24 px-4 sm:px-8">
+        <Hero />
+      </section>
+
+      <section className="py-24 px-4 sm:px-8 bg-gray-50">
+        <About />
+      </section>
+
+      <section className="py-24 px-4 sm:px-8">
+        <Features />
+      </section>
+
+      <section className="py-24 px-4 sm:px-8 bg-gray-50">
+        <Assistant />
+      </section>
+
+      <section className="py-24 px-4 sm:px-8">
+        <ResumeBuilder />
+      </section>
+
+      <section className="py-24 px-4 sm:px-8 bg-gray-50">
+        <AdminPanel />
+      </section>
     </>
   );
 }
 
 export default App;
+
 
 
 
