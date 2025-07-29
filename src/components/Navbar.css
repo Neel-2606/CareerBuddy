@@ -9,14 +9,12 @@
   color: white;
   position: sticky;
   top: 0;
-  z-index: 100;
-  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 .logo-section {
   display: flex;
   align-items: center;
-  flex: 1;
 }
 
 .logo-img {
@@ -41,6 +39,7 @@
   color: white;
   cursor: pointer;
   margin-left: auto;
+  z-index: 1001;
 }
 
 .nav-links {
@@ -88,23 +87,30 @@
   opacity: 0.85;
 }
 
-/* ========== MOBILE STYLES ========== */
+/* ========== MOBILE SIDE MENU ========== */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
 
-  .nav-links,
-  .auth-buttons {
-    display: none;
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: #111;
     flex-direction: column;
-    width: 100%;
-    margin-top: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 20px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
   }
 
-  .nav-links.open,
-  .auth-buttons.open {
-    display: flex;
+  .nav-links.open {
+    right: 0;
   }
 
   .nav-links li {
@@ -112,10 +118,34 @@
   }
 
   .auth-buttons {
-    gap: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
   }
 
-  .navbar {
-    align-items: flex-start;
+  .auth-buttons.open {
+    display: flex;
+    position: fixed;
+    top: 70%;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Optional: backdrop when menu open */
+  .mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: none;
+  }
+
+  .mobile-backdrop.show {
+    display: block;
   }
 }
