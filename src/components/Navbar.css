@@ -10,11 +10,13 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;
 }
 
 .logo-section {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .logo-img {
@@ -28,7 +30,17 @@
 .brand-name {
   font-size: 22px;
   font-weight: bold;
-  color: #7CFC00; /* Light green */
+  color: #7CFC00;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
 }
 
 .nav-links {
@@ -74,4 +86,36 @@
 .login-btn:hover,
 .register-btn:hover {
   opacity: 0.85;
+}
+
+/* ========== MOBILE STYLES ========== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links,
+  .auth-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .nav-links.open,
+  .auth-buttons.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .auth-buttons {
+    gap: 8px;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
 }
