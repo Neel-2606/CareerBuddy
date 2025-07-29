@@ -19,7 +19,8 @@ function Navbar() {
       </ul>
       <div className="auth-buttons">
         <button className="login-btn" onClick={() => navigate('/login')}>Login</button>
-        <button className="register-btn" onClick={() => navigate('/register')}>Register</button>
+        <button className="register-btn" onClick={() => navigate('/signup')}>Register</button>
+
       </div>
     </nav>
   );
