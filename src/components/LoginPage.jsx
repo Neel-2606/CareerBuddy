@@ -110,11 +110,7 @@ const LoginPage = () => {
           <span onClick={() => navigate("/signup")}>Sign Up</span>
         </div>
 
-        <div className="demo-box">
-          <strong>Demo Login:</strong>
-          <div>Email: admin@careerbuddy.com</div>
-          <div>Password: admin123</div>
-        </div>
+        
       </div>
     </div>
   );
